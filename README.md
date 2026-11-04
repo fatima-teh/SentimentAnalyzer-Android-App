@@ -1,3 +1,4 @@
+
 # SentimentAnalyzer — Android App Using TensorFlow Lite
 
 ## 1. Project Overview
@@ -8,11 +9,11 @@ This project demonstrates how machine learning can be integrated into an Android
 
 ## 2. Features
 
-- User can enter text for sentiment analysis.
+- Users can enter text for sentiment analysis.
 - Uses a TensorFlow Lite model for text classification.
 - Displays the predicted sentiment.
-- Includes a simple Android user interface.
-- Tested with positive and negative text examples on an Android phone.
+- Provides a simple and user-friendly Android interface.
+- Supports testing with positive and negative text examples.
 
 ## 3. Technologies Used
 
@@ -20,7 +21,7 @@ This project demonstrates how machine learning can be integrated into an Android
 - Kotlin
 - XML
 - TensorFlow Lite
-- TensorFlow Lite Task Text library
+- TensorFlow Lite Task Text Library
 
 ## 4. Project Structure
 
@@ -39,156 +40,40 @@ SentimentAnalyzer/
 │                   └── activity_main.xml
 ├── gradle/
 ├── README.md
-├── build.gradle
-└── settings.gradle
+├── build.gradle.kts
+└── settings.gradle.kts
 ```
 
-Note: Actual Gradle filenames and source directories may vary depending on the project configuration.
+Note: The actual directory structure and Gradle filenames may vary depending on the project configuration.
 
 ## 5. Model Information
 
-The application uses the TensorFlow Lite model file:
+The application uses the following TensorFlow Lite model:
 
-`sentiment_model.tflite`
+**Model File:** `sentiment_model.tflite`
 
-Expected model location:
-
-`app/src/main/assets/sentiment_model.tflite`
-
-The model source used during development:
-
-https://storage.googleapis.com/download.tensorflow.org/models/tflite/text_classification/text_classification_v2.tflite
-
-The model is integrated into the Android application for text classification. Model accuracy and training details are not reported because they have not been independently measured or verified for this project.
-
-## 6. Dependency
-
-The project uses the following TensorFlow Lite Task Text dependency:
-
-`org.tensorflow:tensorflow-lite-task-text:0.4.4`
-
-## 7. Requirements
-
-- Android Studio
-- Android SDK compatible with the project configuration
-- Android phone or emulator
-- Internet connection for downloading dependencies during initial setup, if required
-
-## 8. How to Run the Project
-
-1. Download or clone the project repository.
-2. Open the project in Android Studio.
-3. Wait for Gradle synchronization to finish.
-4. Connect an Android phone with USB debugging enabled or start an emulator.
-5. Select the device in Android Studio.
-6. Click the Run button.
-7. Enter text into the application and view the predicted sentiment.
-
-## 9. Testing
-
-The application was run on an Android phone and tested using positive and negative text examples.
-
-Screenshots of the application and its prediction results are included in the assignment evidence.
-
-## 10. Limitations
-
-- Predictions depend on the capabilities of the selected model.
-- Sarcasm, ambiguous wording and context-dependent sentences may be classified incorrectly.
-- Model accuracy has not been independently benchmarked as part of this project.
-- Supported languages and input limitations depend on the model.
-
-## 11. Original Repository Studied
-
-https://github.com/Uzair390-Del/NumberGuessingAppTflite
-
-The original repository was studied and run to understand how a TensorFlow Lite model can be integrated into an Android application.
-
-The original project predicts numerical values, whereas SentimentAnalyzer performs text classification. They are separate applications with different purposes.
-
-## 12. Screenshots
-
-Include the following real screenshots in the assignment report:
-
-- Application interface
-- Positive sentiment prediction
-- Negative sentiment prediction
-- Relevant source code and model integration
-
-## 13. Author Information
-
-- Student Name: [Fatima Tehreem]
-- Registration Number: [242201073]
-- Course Name: [Mobile Android App]
-- Instructor: [Sir Uzair Hassan]
-- Institution: [KICSIT]
-# SentimentAnalyzer — Android App Using TensorFlow Lite
-
-## 1. Project Overview
-
-SentimentAnalyzer is an Android application developed using Kotlin and Android Studio. It uses a TensorFlow Lite text-classification model to analyze user-entered text and display a sentiment prediction.
-
-This project demonstrates how machine learning can be integrated into an Android application for on-device inference.
-
-## 2. Features
-
-- User can enter text for sentiment analysis.
-- Uses a TensorFlow Lite model for text classification.
-- Displays the predicted sentiment.
-- Includes a simple Android user interface.
-- Tested with positive and negative text examples on an Android phone.
-
-## 3. Technologies Used
-
-- Android Studio
-- Kotlin
-- XML
-- TensorFlow Lite
-- TensorFlow Lite Task Text library
-
-## 4. Project Structure
-
+**Model Location:**
 ```text
-SentimentAnalyzer/
-├── app/
-│   └── src/
-│       └── main/
-│           ├── assets/
-│           │   └── sentiment_model.tflite
-│           ├── java/
-│           │   └── com/example/sentimentanalyzer/
-│           │       └── MainActivity.kt
-│           └── res/
-│               └── layout/
-│                   └── activity_main.xml
-├── gradle/
-├── README.md
-├── build.gradle
-└── settings.gradle
+app/src/main/assets/sentiment_model.tflite
 ```
 
-Note: Actual Gradle filenames and source directories may vary depending on the project configuration.
-
-## 5. Model Information
-
-The application uses the TensorFlow Lite model file:
-
-`sentiment_model.tflite`
-
-Expected model location:
-
-`app/src/main/assets/sentiment_model.tflite`
-
-The model source used during development:
+**Original Model Source:**
 
 https://storage.googleapis.com/download.tensorflow.org/models/tflite/text_classification/text_classification_v2.tflite
 
-The model is integrated into the Android application for text classification. Model accuracy and training details are not reported because they have not been independently measured or verified for this project.
+The model is integrated into the Android application to perform text classification directly on the device.
 
-## 6. Dependency
+Model accuracy and training details have not been independently measured or verified as part of this project.
+
+## 6. Dependencies
 
 The project uses the following TensorFlow Lite Task Text dependency:
 
-`org.tensorflow:tensorflow-lite-task-text:0.4.4`
+```gradle
+implementation 'org.tensorflow:tensorflow-lite-task-text:0.4.4'
+```
+
+Note: The dependency declaration syntax may differ depending on whether the project uses Groovy or Kotlin DSL.
 
 ## 7. Requirements
 
@@ -199,48 +84,72 @@ The project uses the following TensorFlow Lite Task Text dependency:
 
 ## 8. How to Run the Project
 
-1. Download or clone the project repository.
+1. Clone or download this repository.
 2. Open the project in Android Studio.
-3. Wait for Gradle synchronization to finish.
+3. Wait for Gradle synchronization to complete.
 4. Connect an Android phone with USB debugging enabled or start an emulator.
-5. Select the device in Android Studio.
+5. Select the connected device in Android Studio.
 6. Click the Run button.
-7. Enter text into the application and view the predicted sentiment.
+7. Enter text into the application.
+8. View the predicted sentiment displayed on the screen.
 
 ## 9. Testing
 
-The application was run on an Android phone and tested using positive and negative text examples.
+The application was tested on an Android phone using positive and negative text examples.
 
-Screenshots of the application and its prediction results are included in the assignment evidence.
+Testing includes:
+
+- Entering positive sentences.
+- Entering negative sentences.
+- Checking the predicted sentiment.
+- Verifying that the application displays the prediction.
+
+Screenshots of the application and prediction results are included in the assignment evidence.
 
 ## 10. Limitations
 
 - Predictions depend on the capabilities of the selected model.
-- Sarcasm, ambiguous wording and context-dependent sentences may be classified incorrectly.
-- Model accuracy has not been independently benchmarked as part of this project.
-- Supported languages and input limitations depend on the model.
+- Sarcasm and ambiguous wording may affect prediction results.
+- Context-dependent sentences may be classified incorrectly.
+- Model accuracy has not been independently benchmarked.
+- Supported languages and input limitations depend on the selected model.
 
 ## 11. Original Repository Studied
 
+The following GitHub repository was used as a reference for understanding TensorFlow Lite integration in Android applications:
+
 https://github.com/Uzair390-Del/NumberGuessingAppTflite
 
-The original repository was studied and run to understand how a TensorFlow Lite model can be integrated into an Android application.
+The original repository was studied and executed to understand how a TensorFlow Lite model can be integrated into an Android application.
 
-The original project predicts numerical values, whereas SentimentAnalyzer performs text classification. They are separate applications with different purposes.
+The original application predicts numerical values, whereas SentimentAnalyzer performs text classification. Both applications demonstrate the use of on-device machine learning in Android.
 
 ## 12. Screenshots
 
-Include the following real screenshots in the assignment report:
+The following screenshots should be included in the project documentation:
 
-- Application interface
-- Positive sentiment prediction
-- Negative sentiment prediction
-- Relevant source code and model integration
+1. Application interface.
+2. Positive sentiment prediction.
+3. Negative sentiment prediction.
+4. Relevant source code and model integration.
 
 ## 13. Author Information
 
-- Student Name: [Fatima Tehreem]
-- Registration Number: [242201073]
-- Course Name: [Mobile App ]
-- Instructor: [Sir Uzair Hassan]
-- Institution: [Kicsit]
+- **Student Name:** Fatima Tehreem
+- **Registration Number:** 242201073
+- **Course Name:** Mobile App
+- **Instructor:** Sir Uzair Hassan
+- **Institution:** KICSIT
+
+## 14. Acknowledgements
+
+This project was developed for academic purposes as part of the Android application development assignment.
+
+Acknowledgement is given to the original GitHub repository and TensorFlow Lite resources used during development.
+
+---
+
+**Project:** SentimentAnalyzer  
+**Platform:** Android  
+**Language:** Kotlin  
+**Machine Learning Framework:** TensorFlow Lite
