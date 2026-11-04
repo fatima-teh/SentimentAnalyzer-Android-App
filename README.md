@@ -116,11 +116,11 @@ Include the following real screenshots in the assignment report:
 
 ## 13. Author Information
 
-- Student Name: [Enter your name]
-- Registration Number: [Enter your registration number]
-- Course Name: [Enter course name]
-- Instructor: [Enter instructor name]
-- Institution: [Enter institution name]
+- Student Name: [Fatima Tehreem]
+- Registration Number: [242201073]
+- Course Name: [Mobile Android App]
+- Instructor: [Sir Uzair Hassan]
+- Institution: [KICSIT]
 # SentimentAnalyzer — Android App Using TensorFlow Lite
 
 ## 1. Project Overview
